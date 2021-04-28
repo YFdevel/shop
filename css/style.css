@@ -6,11 +6,60 @@ body {
   line-height: 17px;
   color: #5d5d5d;
 }
+
 a {
   text-decoration: none;
 }
+
+a:hover,
+a:focus {
+  cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
+.link:active {
+  color: gold;
+}
+
 ul {
   list-style: none;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+input:hover,
+input:focus {
+  background: white;
+  cursor: pointer;
+  box-shadow: 2px -2px 11px 0 rgba(0, 0, 0, .2);
+}
+
+.radio:hover,
+.radio:focus {
+  outline-style: none;
+  transform: scale(1.2, 1.2);
+  box-shadow: none;
+}
+
+header img:hover,
+footer img:hover,
+header img:focus,
+footer img:focus {
+  transform: scale(1.1, 1.1);
+
 }
 
 .container {
@@ -28,6 +77,7 @@ ul {
   border: 0;
   clip: rect(0 0 0 0);
 }
+
 /* header */
 .header,
 .footer-bottom {
@@ -36,6 +86,7 @@ ul {
   min-height: 75px;
   padding: 18px 0 18px 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 .header__wrapper,
@@ -47,6 +98,7 @@ ul {
 .header__logo {
   margin-right: 41px;
 }
+
 .header__burger,
 .header__login {
   margin-right: 34px;
@@ -56,17 +108,42 @@ ul {
   background-color: #222222;
   border: none;
 }
+
+.header__basket {
+  position: relative;
+}
+
+.header__basket::after {
+  content: '5';
+  color: #ffffff;
+  font-size: 12px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: url('../img/busket-circle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: -12px;
+  top: -22px;
+  z-index: 100;
+}
+
 /* brend */
 .brend {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .brend__image {
   width: 100%;
 }
+
 .brend__wrapper {
   width: 50%;
 }
@@ -92,6 +169,7 @@ ul {
   left: 30px;
   top: 45%;
 }
+
 .brend__heading {
   font-weight: 900;
   font-size: 48px;
@@ -108,10 +186,12 @@ ul {
   color: #222222;
   text-transform: uppercase;
 }
+
 /* stocks */
 .stocks {
   padding: 63px 0 63px 0;
 }
+
 .stocks__list {
   display: flex;
   justify-content: space-between;
@@ -156,6 +236,7 @@ ul {
   background-repeat: no-repeat;
   margin-top: 30px;
 }
+
 .stocks__list-text {
   font-weight: normal;
   font-size: 16px;
@@ -177,6 +258,7 @@ ul {
 .change-color {
   color: #f16d7f;
 }
+
 /* products */
 .products__cards-image {
   background: rgba(58, 56, 56, 0.86);
@@ -193,11 +275,13 @@ ul {
   line-height: 36px;
   color: #222222;
 }
+
 .products__text {
   text-align: center;
   color: #9f9f9f;
   margin-bottom: 48px;
 }
+
 .products {
   width: 100%;
 }
@@ -247,17 +331,22 @@ ul {
   color: #fff;
 }
 
+
 .products__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 63px auto 95px auto;
-  display: block;
-  width: 134px;
-  padding: 14px 38px;
+  width: 234px;
+  height: 60px;
   border: 1px solid #ff6a6a;
   font-size: 16px;
   line-height: 19px;
   color: #f26376;
   text-align: center;
+  box-sizing: border-box;
 }
+
 /* advantages */
 .advantages {
   background: #222224;
@@ -293,6 +382,7 @@ ul {
   line-height: 17px;
   color: #fbfbfb;
 }
+
 /* footer */
 .footer-top {
   background-image: url("../img/subscribe_back.jpg");
@@ -329,6 +419,7 @@ ul {
   color: #222224;
   margin-top: 20px;
 }
+
 .footer-top__text--italic {
   font-weight: 400;
   font-style: italic;
@@ -403,17 +494,19 @@ ul {
   box-sizing: border-box;
   margin-right: 6px;
 }
+
 /* menu */
 .menu {
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 79px;
   width: 180px;
   padding-bottom: 150px;
   background: #ffffff;
-  height: 100%;
+  min-height: 765px;
   padding-left: 34px;
   box-sizing: border-box;
+  z-index: 100;
   display: none;
 }
 
@@ -460,17 +553,25 @@ ul {
   margin-bottom: 12px;
 }
 
-.menu__sublist-item > a {
+.menu__sublist-item>a {
   font-weight: 400;
   color: #6f6e6e;
 }
+
 /* hover */
-.brend:hover .menu {
-  display: block;
-}
 .products__cards-image:hover .products__cards-button {
   display: flex;
 }
+
+.products__cards-image:hover .products__cards-button img {
+  opacity: 1.0;
+  margin-right: 2px;
+}
+
 .products__cards-image:hover img {
   opacity: 0.3;
+}
+
+.close:hover {
+  transform: scale(1.4, 1.4);
 }
