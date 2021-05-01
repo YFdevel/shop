@@ -1,0 +1,21 @@
+.card-info {
+    width: 390px;
+    padding-left: 31px;
+    padding-top: 22px;
+
+
+    &__heading {
+        width: 220px;
+        @include font(400, 24px, 29px, normal);
+        color: #222222;
+        text-transform: uppercase;
+        margin-bottom: 42px;
+    }
+
+    &__list-item {
+        @include font(400, 22px, 26px, normal);
+        color: #575757;
+        margin-bottom: 10px;
+    }
+
+}

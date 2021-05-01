@@ -1,0 +1,25 @@
+.auth-block {
+    min-height: 500px;
+
+    &__wrapper {
+        @include flex(row, space-between);
+        // display: flex;
+        // justify-content: space-between;
+        padding: 64px 0 112px;
+    }
+
+    &__button {
+        width: 160px;
+        padding: 16px 25px;
+        background: $light-red-color;
+        color: $white-color;
+        text-transform: uppercase;
+        margin-top: 39px;
+    }
+
+    &__button-img {
+        margin-left: 2px;
+    }
+
+
+}

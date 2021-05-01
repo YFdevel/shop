@@ -1,0 +1,38 @@
+.cart-sum {
+    width: 100%;
+    height: 214px;
+    padding: 44px 39px 34px 42px;
+    box-sizing: border-box;
+    background: #F5F3F3;
+    margin-top: 57px;
+
+
+    &__button {
+        width: 273px;
+        height: 50px;
+        margin-top: 17px;
+        padding: 16px 25px;
+        background: $light-red-color;
+        color: $white-color;
+        text-transform: uppercase;
+        @include font(300, 16px, 19px, normal);
+
+    }
+
+    &__text {
+        @include font(400, 11px, 13px, normal);
+        color: #4A4A4A;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        text-align: right;
+    }
+
+    &__text-big {
+        @include font(300, 16px, 19px, normal);
+        color: #222222;
+        text-transform: uppercase;
+        margin-bottom: 21px;
+        text-align: right;
+    }
+
+}
