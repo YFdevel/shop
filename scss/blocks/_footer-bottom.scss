@@ -1,0 +1,33 @@
+.footer-bottom {
+    width: 100%;
+    background: #222222;
+    min-height: 75px;
+    padding: 18px 0 18px 0;
+    box-sizing: border-box;
+    position: relative;
+
+
+    &__text {
+        font-size: 16px;
+        line-height: 19px;
+        color: #fbfbfb;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        width: 32px;
+        height: 32px;
+        @include flex(row, center, center);
+        box-sizing: border-box;
+        margin-right: 6px;
+    }
+
+    &__image:hover,
+    &__image:focus {
+        transform: scale(1.1, 1.1);
+    }
+
+}

@@ -1,0 +1,28 @@
+.advantages {
+    background: #222224;
+
+    &__list {
+        @include flex(row, space-between, center);
+    }
+
+    &__list-item {
+        width: 360px;
+        min-height: 340px;
+        box-sizing: border-box;
+        padding: 104px 30px 104px 30px;
+        @include flex(column, flex-start, center);
+    }
+
+    &__list-heading {
+        margin-top: 19px;
+        margin-bottom: 16px;
+        @include font(400, 19.96px, 24px, normal);
+        color: #fbfbfb;
+
+    }
+
+    &__list-text {
+        @include font(300, 14px, 17px, normal);
+        color: #fbfbfb;
+    }
+}
