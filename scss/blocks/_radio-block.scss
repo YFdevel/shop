@@ -5,7 +5,7 @@
     &__item {
         @include flex(row, flex-start, baseline);
         @include font(300, 11px, 13px, normal);
-        color: #000000;
+        color: $black-color;
         margin-right: 20px;
     }
 

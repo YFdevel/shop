@@ -1,18 +1,33 @@
 .cart-block {
-    min-height: 500px;
+  min-height: 500px;
 
+  //&__left,
+  //&__right {
+  //  height: 100%;
+  //  width: 100%;
+  //}
 
-    &__left,
-    &__right {
-        height: 100%;
+  &__wrapper {
+    @include flex(row, space-between);
+    padding: 64px 0 112px;
+
+    @include tablet {
+      @include flex(column, flex-start, center);
     }
-
-    &__wrapper {
-        @include flex(row, space-between);
-        padding: 64px 0 112px;
+    @include mobile {
+      @include flex(column, flex-start, center);
     }
+  }
 
-    &__right {
-        width: 360px;
+  &__right {
+    width: 360px;
+    @include tablet {
+      @include flex(row, space-between);
+      width: 100%;
     }
+    @include mobile {
+      @include flex(column, space-between);
+      width: 100%;
+    }
+  }
 }
