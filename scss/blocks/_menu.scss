@@ -1,56 +1,66 @@
 .menu {
-    position: absolute;
-    right: 0;
-    top: 79px;
-    width: 180px;
-    padding-bottom: 150px;
-    background: #ffffff;
-    min-height: 765px;
-    padding-left: 34px;
-    box-sizing: border-box;
-    z-index: 100;
-    display: none;
+  position: absolute;
+  right: 0;
+  top: 79px;
+  width: 180px;
+  padding-bottom: 150px;
+  background: $white-color;
+  min-height: 765px;
+  padding-left: 34px;
+  box-sizing: border-box;
+  z-index: 100;
+  display: none;
+  @include tablet {
+    width: auto;
+    min-height: auto;
+    padding: 5px;
+  }
+  @include mobile {
+    min-height: auto;
+    width: auto;
+    padding: 5px;
+  }
 }
 
 .menu__image {
-    border: none;
-    outline: none;
-    background: none;
-    float: right;
-    margin: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  float: right;
+  margin: 10px;
 }
 
 .menu__heading {
-    clear: both;
-    @include font(700, 14px, 17px, normal);
-    color: #000000;
-    text-transform: uppercase;
-    margin-bottom: 24px;
+  clear: both;
+  @include font(700, 14px, 17px, normal);
+  color: $black-color;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
 .menu__list {
-    @include flex(column);
-    clear: both;
+  @include flex(column);
+  clear: both;
 }
 
 .menu__link {
-    display: inline-block;
-    @include font(400, 14px, 17px, normal);
-    color: $light-red-color;
-    text-transform: uppercase;
-    align-self: flex-start;
-    margin-bottom: 16px;
+  display: inline-block;
+  @include font(400, 14px, 17px, normal);
+  color: $light-red-color;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin-bottom: 16px;
 }
 
 .menu__sublist {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .menu__sublist-item {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
-.menu__sublist-item>a {
-    font-weight: 400;
-    color: #6f6e6e;
+.menu__sublist-item > a {
+  font-weight: 400;
+  color: $dusty-grey-color;
 }
