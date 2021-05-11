@@ -1,0 +1,77 @@
+
+.product-desc {
+  padding: 64px 0;
+
+  &__heading {
+    width: 300px;
+    color: $light-red-color;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 16px;
+    @include mobile{
+      width: 80%;
+    }
+  }
+  &__heading::after {
+    content: "";
+    background: $rich-pink-color;
+    width: 63px;
+    height: 3px;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  &__wrapper {
+    @include flex(column, flex-start, center);
+  }
+  &__small-heading {
+    @include font(300, 18px, 22px, normal);
+    text-transform: uppercase;
+    color: $grey-green-color;
+    margin-bottom: 48px;
+  }
+  &__text {
+    width: 47%;
+    color: $light-grey-color;
+    margin-bottom: 32px;
+    @include mobile{
+      width: 80%;
+    }
+  }
+  &__sum {
+    @include font(300, 24px, 29px, normal);
+    color: $light-red-color;
+    margin-bottom: 100px;
+
+  }
+  &__dropdowns {
+    margin: 0 auto;
+    @include flex(row, center, center);
+  }
+  &__button {
+    width: 180px;
+    border: 1px solid $rich-pink-color;
+    @include font(400, 16px, 19px, normal);
+    color: $crayola-pink-color;
+    margin-top: 48px;
+    padding: 13px 30px;
+    transition-duration: 0.8s;
+    transition-property: width,font-size;
+    transition-timing-function: linear;
+  }
+  &__button svg {
+    transition-duration: 0.8s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+  }
+  &__button:hover {
+    width: 200px;
+    font-size: 18px;
+  }
+  &__button svg:hover {
+    transform: scale(1.3);
+  }
+}
+
