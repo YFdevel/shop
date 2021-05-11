@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   @include font(300, 14px, 17px, normal);
   color: $grey-green-color;
 }
@@ -51,7 +51,8 @@ input:focus {
   box-shadow: none;
 }
 
-.container {
+.container,
+.footer-product-container {
   width: 1140px;
   margin: 0 auto;
   @include tablet {
@@ -81,19 +82,93 @@ input:focus {
   transform: scale(1.2, 1.2);
 }
 
-.block-title {
-  min-height: 140px;
-  width: 100%;
-  background: $beige-color;
-  @include flex(row, center, center);
+.add-to-cart {
+  @include flex(row, space-between, center);
+  padding: 13px;
+  background: none;
+
 }
 
-.block-title__heading {
-  @include font(400, 24px, 29px, normal);
-  text-align: left;
-  text-transform: uppercase;
-  color: $light-red-color;
-  @include mobile{
-    text-align: center;
+.breadcrumbs {
+  display: flex;
+  @include font(300, 14px, 17px, normal);
+  @include mobile {
+    margin-top: 32px;
   }
 }
+
+.breadcrumbs__link {
+  color: $light-grey-color;
+}
+
+.my-btn {
+  color: $dusty-grey-color;
+  text-transform: uppercase;
+  margin-right: 22px;
+  padding: 12px 30px;
+  box-sizing: border-box;
+  position: relative;
+  @include mobile {
+    @include font(300, 10px, 12px, normal);
+    padding: 5px 10px;
+  }
+}
+
+
+.my-btn-text::before {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  content: url("../img/dropdown-arrow.svg");
+  @include mobile {
+    right: -4px;
+    top: 10%;
+  }
+}
+.my-container {
+  height: 832px;
+  @include mobile {
+    height: 454px;
+  }
+}
+
+.carousel, .carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  color: red;
+  align-items: center;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  color: red;
+}
+
+.fa-angle-double-right,
+.fa-angle-double-left {
+  font-size: 30px;
+}
+
+
