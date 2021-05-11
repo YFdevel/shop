@@ -3,11 +3,15 @@
   padding: 64px 0;
 
   &__heading {
+    width: 300px;
     color: $light-red-color;
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
+    @include mobile{
+      width: 80%;
+    }
   }
   &__heading::after {
     content: "";
@@ -16,7 +20,8 @@
     height: 3px;
     position: absolute;
     top: 22px;
-    left: 47%;
+    left: 50%;
+    transform: translate(-50%);
   }
   &__wrapper {
     @include flex(column, flex-start, center);
@@ -31,6 +36,9 @@
     width: 47%;
     color: $light-grey-color;
     margin-bottom: 32px;
+    @include mobile{
+      width: 80%;
+    }
   }
   &__sum {
     @include font(300, 24px, 29px, normal);
@@ -49,6 +57,21 @@
     color: $crayola-pink-color;
     margin-top: 48px;
     padding: 13px 30px;
+    transition-duration: 0.8s;
+    transition-property: width,font-size;
+    transition-timing-function: linear;
+  }
+  &__button svg {
+    transition-duration: 0.8s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+  }
+  &__button:hover {
+    width: 200px;
+    font-size: 18px;
+  }
+  &__button svg:hover {
+    transform: scale(1.3);
   }
 }
 

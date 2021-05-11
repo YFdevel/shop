@@ -29,6 +29,13 @@
   &__burger {
     background-color: $dark-color;
     border: none;
+    align-self: center;
+  }
+  &__burger svg{
+    fill:$white-color;
+  }
+  &__burger:active svg{
+    fill:$gold-color;
   }
 
   &__basket {
@@ -57,4 +64,5 @@
   &__img:focus {
     transform: scale(1.1, 1.1);
   }
+
 }

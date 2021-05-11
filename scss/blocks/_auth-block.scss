@@ -22,7 +22,13 @@
   }
 
   &__button-img {
-    margin-left: 2px;
+    margin-left: 3px;
+    animation-duration: 0.4s;
+    animation-timing-function: step-end;
+
+  }
+ &__button:hover &__button-img{
+    animation-name: auth-btn-arrow;
   }
 
 }

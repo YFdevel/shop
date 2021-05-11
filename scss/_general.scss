@@ -105,7 +105,7 @@ input:focus {
   color: $dusty-grey-color;
   text-transform: uppercase;
   margin-right: 22px;
-  padding: 12px 30px;
+  padding: 15px 30px;
   box-sizing: border-box;
   position: relative;
   @include mobile {
@@ -114,24 +114,30 @@ input:focus {
   }
 }
 
-
 .my-btn-text::before {
   position: absolute;
-  right: 0;
+  right: 2px;
   top: 15%;
   content: url("../img/dropdown-arrow.svg");
   @include mobile {
-    right: -4px;
-    top: 10%;
-  }
-}
-.my-container {
-  height: 832px;
-  @include mobile {
-    height: 454px;
+    right: -2px;
+    top: 12%;
   }
 }
 
+.slider-container {
+  height: 724px;
+  width: 597px;
+
+  @include tablet {
+    height: 565px;
+    width: 466px;
+  }
+  @include mobile {
+    height: 454px;
+    width: 90%;
+  }
+}
 .carousel, .carousel-inner {
   height: 100%;
 }
@@ -145,20 +151,22 @@ input:focus {
 }
 
 .carousel-item img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
+  object-fit: contain;
+  vertical-align: middle;
+  border-style: none;
+  height: 100vh;
+  width: 100%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background: none;
+  //align-self: center;
 }
 
 .carousel-control-next,
 .carousel-control-prev {
   color: red;
-  align-items: center;
 }
 
 .carousel-control-next:hover,
@@ -170,5 +178,21 @@ input:focus {
 .fa-angle-double-left {
   font-size: 30px;
 }
+
+@keyframes auth-btn-arrow {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 
 
