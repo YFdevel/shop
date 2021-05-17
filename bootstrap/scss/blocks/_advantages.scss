@@ -14,11 +14,11 @@
     box-sizing: border-box;
     padding: 104px 30px 104px 30px;
     @include flex(column, flex-start, center);
-    @include tablet{
+    @include tablet {
       padding: 48px 0;
       min-height: auto;
     }
-    @include mobile{
+    @include mobile {
       padding: 48px 0;
       min-height: auto;
       width: 90%;

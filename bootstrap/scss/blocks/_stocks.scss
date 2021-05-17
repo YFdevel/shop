@@ -10,9 +10,11 @@
     width: 360px;
     min-height: 260px;
     @include flex(row, center, center);
+
     @include tablet {
       width: 32%;
     }
+
     @include mobile {
       width: 100%;
       margin-bottom: 32px;
@@ -35,8 +37,9 @@
     width: 100%;
     min-height: 180px;
     @include back-url-pos-rep-size("../img/accesories.jpg", center, no-repeat, cover);
+    background-color: #5b4b4a;
     margin-top: 20px;
-    @include mobile{
+    @include mobile {
       min-height: 111px;
     }
   }
