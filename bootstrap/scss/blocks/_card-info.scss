@@ -13,7 +13,7 @@
     color: $dark-color;
     text-transform: uppercase;
     margin-bottom: 42px;
-    @include mobile{
+    @include mobile {
       width: 100%;
       @include font(400, 16px, 19px, normal);
       margin-bottom: 25px;
@@ -24,9 +24,8 @@
     @include font(400, 22px, 26px, normal);
     color: $graphite-color;
     margin-bottom: 10px;
-    @include mobile{
+    @include mobile {
       @include font(400, 14px, 17px, normal);
     }
   }
-
 }

@@ -2,9 +2,11 @@
   @include tablet {
     width: 45%;
   }
+
   @include mobile {
     width: 85%;
   }
+
   &__field {
     @include flex(column, space-between);
     padding: 20px 0 0;
@@ -13,7 +15,7 @@
   &__input-text {
     padding: 12px 16px;
     margin-bottom: 20px;
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
   }
@@ -27,12 +29,10 @@
   &__button {
     @include font(300, 11px, 13px, normal);
     width: 100px;
-    height: 34px;
+    min-height: 34px;
     color: $dark-grey-color;
     text-transform: uppercase;
     border: 1px solid $agate-grey-color;
     background-color: $white-color;
-
   }
-
 }

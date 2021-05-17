@@ -5,6 +5,7 @@
   box-sizing: border-box;
   background: $creame-color;
   margin-top: 57px;
+
   @include tablet {
     width: 47%;
   }
@@ -52,5 +53,4 @@
     margin-bottom: 21px;
     text-align: right;
   }
-
 }
