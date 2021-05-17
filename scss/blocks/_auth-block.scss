@@ -27,7 +27,8 @@
     animation-timing-function: step-end;
 
   }
- &__button:hover &__button-img{
+  
+  &__button:hover &__button-img {
     animation-name: auth-btn-arrow;
   }
 

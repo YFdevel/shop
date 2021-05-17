@@ -22,7 +22,6 @@
     margin-bottom: 40px;
     width: 100%;
     box-shadow: 6px 6px 20px 0 rgba(221, 221, 221, 1);
-
   }
 
   &__cards-item-close {
@@ -43,16 +42,19 @@
       height: auto;
     }
   }
+
   &__buttons {
     width: 100%;
     min-height: 50px;
     margin-bottom: 60px;
     box-sizing: border-box;
     @include flex(row, space-between);
+
     @include tablet {
       @include flex(row, center);
       margin-bottom: 40px;
     }
+
     @include mobile {
       @include flex(row, space-between);
       margin-bottom: 40px;
@@ -71,9 +73,11 @@
     border: 1px solid $agate-grey-color;
     @include font(400, 14px, 17px, normal);
     text-transform: uppercase;
+
     @include tablet {
       margin-right: 49px;
     }
+
     @include mobile {
       margin-right: 10px;
       @include font(400, 12px, 14px, normal);
@@ -90,5 +94,4 @@
   &__buttons-link:active {
     opacity: 0.6;
   }
-
 }

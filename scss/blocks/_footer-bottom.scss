@@ -5,12 +5,14 @@
   padding: 18px 0 18px 0;
   box-sizing: border-box;
   position: relative;
-@include mobile{
-  padding: 50px 0 18px 0;
-}
+
+  @include mobile {
+    padding: 50px 0 18px 0;
+  }
+
   &__wrapper {
     @include flex(row, space-between);
-    @include mobile{
+    @include mobile {
       @include flex(column-reverse, center, center);
     }
   }
@@ -23,7 +25,7 @@
 
   &__list {
     display: flex;
-    @include mobile{
+    @include mobile {
       margin-bottom: 40px;
     }
   }
@@ -40,5 +42,4 @@
   &__image:focus {
     transform: scale(1.1, 1.1);
   }
-
 }
