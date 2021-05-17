@@ -1,0 +1,28 @@
+.block-title {
+  min-height: 140px;
+  width: 100%;
+  background: $beige-color;
+  @include flex(row, flex-start, center);
+
+  &__heading {
+    @include font(400, 24px, 29px, normal);
+    text-align: left;
+    text-transform: uppercase;
+    color: $light-red-color;
+    position: relative;
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__heading--product {
+    @include flex(row, space-between, center);
+  }
+
+  &__heading--product{
+    @include mobile{
+      @include flex(column,flex-start,center);
+    }
+  }
+}
+

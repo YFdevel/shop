@@ -1,0 +1,198 @@
+body {
+  font-family: "Lato", "Arial", sans-serif;
+  @include font(300, 14px, 17px, normal);
+  color: $grey-green-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
+.link:active {
+  color: $gold-color;
+}
+
+ul {
+  list-style: none;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:active {
+  opacity: 0.6;
+}
+
+input:hover,
+input:focus {
+  background: $white-color;
+  cursor: pointer;
+  box-shadow: 2px -2px 11px 0 rgba(0, 0, 0, .2);
+}
+
+.radio:hover,
+.radio:focus {
+  outline-style: none;
+  transform: scale(1.1, 1.1);
+  box-shadow: none;
+}
+
+.container,
+.footer-product-container {
+  width: 1140px;
+  margin: 0 auto;
+  @include tablet {
+    width: 90%;
+  }
+  @include mobile {
+    width: 90%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.change-color {
+  color: $light-red-color;
+}
+
+.close:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.add-to-cart {
+  @include flex(row, space-between, center);
+  padding: 13px;
+  background: none;
+
+}
+
+.breadcrumbs {
+  display: flex;
+  @include font(300, 14px, 17px, normal);
+  @include mobile {
+    margin-top: 32px;
+  }
+}
+
+.breadcrumbs__link {
+  color: $light-grey-color;
+}
+
+.my-btn {
+  color: $dusty-grey-color;
+  text-transform: uppercase;
+  margin-right: 22px;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  position: relative;
+  @include mobile {
+    @include font(300, 10px, 12px, normal);
+    padding: 5px 10px;
+  }
+}
+
+.my-btn-text::before {
+  position: absolute;
+  right: 2px;
+  top: 15%;
+  content: url("../img/dropdown-arrow.svg");
+  @include mobile {
+    right: -2px;
+    top: 12%;
+  }
+}
+
+.slider-container {
+  height: 724px;
+  width: 597px;
+
+  @include tablet {
+    height: 565px;
+    width: 466px;
+  }
+  @include mobile {
+    height: 454px;
+    width: 90%;
+  }
+}
+.carousel, .carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.carousel-item img {
+  object-fit: contain;
+  vertical-align: middle;
+  border-style: none;
+  height: 100vh;
+  width: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: none;
+  //align-self: center;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  color: red;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  color: red;
+}
+
+.fa-angle-double-right,
+.fa-angle-double-left {
+  font-size: 30px;
+}
+
+@keyframes auth-btn-arrow {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
