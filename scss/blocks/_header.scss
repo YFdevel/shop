@@ -21,21 +21,24 @@
       margin: 0;
     }
   }
+
   &__login {
     @include mobile {
       display: none;
     }
   }
+
   &__burger {
     background-color: $dark-color;
     border: none;
     align-self: center;
   }
-  &__burger svg{
-    fill:$white-color;
+
+  &__burger svg {
+    fill: $white-color;
   }
-  &__burger:active svg{
-    fill:$gold-color;
+  &__burger:active svg {
+    fill: $gold-color;
   }
 
   &__basket {
@@ -55,6 +58,7 @@
     height: 20px;
     border-radius: 50%;
     @include back-url-pos-rep-size('../img/busket-circle.svg', center, no-repeat, cover);
+    background-color: #f16d7f;
     right: -12px;
     top: -22px;
     z-index: 100;
@@ -64,5 +68,4 @@
   &__img:focus {
     transform: scale(1.1, 1.1);
   }
-
 }

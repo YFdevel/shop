@@ -1,10 +1,14 @@
 .auth-form {
-  @include tablet {
-    flex-basis: 40%;
+  width: 30%;
+
+  @include mobile {
+    width: 90%;
   }
+
   &__field {
     @include flex(column, space-between);
     padding: 20px 0 33px;
+    width: 100%;
   }
 
   &__input-text {
@@ -15,5 +19,8 @@
   &__text {
     @include font(300, 13px, 16px, normal);
     color: $grey-neutral-color;
+    min-height: auto;
+    word-wrap: break-word;
+    width: 100%;
   }
 }
